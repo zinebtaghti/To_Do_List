@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2B2D3C"
@@ -16,7 +17,7 @@
             android:id="@+id/allTasksText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Toutes les taches"
+            android:text="Toutes les tâches"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:fontFamily="sans-serif-condensed"
@@ -25,7 +26,6 @@
             android:elevation="2dp"
             android:shadowColor="#000000"
             android:shadowDx="2"
-
             android:shadowDy="2"
             android:shadowRadius="4" />
 
@@ -49,7 +49,7 @@
         android:layout_marginTop="16dp"
         android:drawableStart="@android:drawable/ic_menu_search"
         android:drawablePadding="8dp"
-        android:hint="Chercher une tache"
+        android:hint="Chercher une tâche"
         android:padding="16dp"
         android:background="@drawable/search_background"
         android:textColor="#FFFFFF"
@@ -74,7 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#888C9B"
-        android:layout_below="@id/taskRecyclerView"/>
+        android:layout_below="@id/taskRecyclerView" />
 
     <!-- Bouton flottant pour ajouter une tâche -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -84,10 +84,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
-        android:backgroundTint="#475072"
-        android:elevation="8dp"
-        android:scaleX="1.2"
-        android:scaleY="1.2"
-        android:src="@drawable/baseline_add_circle_24"
-        android:tint="#FFFFFF"/>
+        android:backgroundTint="@color/white"
+        app:srcCompat="@drawable/baseline_add_circle_24"
+        android:tint="#FFFFFF"
+        android:contentDescription="Ajouter une tâche"
+        android:elevation="8dp" />
+
 </RelativeLayout>
