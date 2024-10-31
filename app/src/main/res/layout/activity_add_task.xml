@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#2B2D3C"
     android:padding="16dp">
 
     <!-- En-tête pour titre de la tâche -->
@@ -13,17 +12,27 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="4dp">
+        android:layout_marginBottom="6dp"> <!-- Marges réduites légèrement -->
 
         <TextView
             android:id="@+id/headerTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ajouter une nouvelle tâche"
-            android:textColor="@android:color/white"
+            android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:paddingTop="50dp"
+            android:paddingBottom="50dp"
             android:fontFamily="sans-serif-medium" />
+
+        <!-- Ajout de l'image en dessous du titre -->
+        <ImageView
+            android:id="@+id/assignmentIcon"
+            android:layout_width="match_parent"
+            android:layout_height="212dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="35dp"
+            android:src="@drawable/baseline_assignment_24" /> <!-- Marge pour espacer l'image du texte -->
     </LinearLayout>
 
     <!-- Champ titre de la tâche -->
@@ -31,13 +40,12 @@
         android:id="@+id/titleInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="4dp"
+        android:layout_below="@+id/headerLayout"
+        android:layout_marginTop="12dp"
         android:hint="Titre de la tâche"
-        android:padding="12dp"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/darker_gray"
-        android:backgroundTint="@android:color/white" />
+        android:padding="16dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888C9B" />
 
     <!-- Champ description de la tâche -->
     <EditText
@@ -46,37 +54,43 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/titleInput"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:hint="Description de la tâche"
-        android:padding="12dp"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/darker_gray"
-        android:backgroundTint="@android:color/white" />
+        android:padding="16dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888C9B" />
 
-    <!-- Champ date limite de la tâche -->
-    <EditText
-        android:id="@+id/dueDateInput"
+    <!-- Champ date limite de la tâche avec l'icône calendrier -->
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/descriptionInput"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:hint="Date limite"
-        android:padding="12dp"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/darker_gray"
-        android:backgroundTint="@android:color/white" />
+        android:layout_marginTop="12dp">
+
+        <EditText
+            android:id="@+id/dueDateInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date limite"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888C9B"
+            android:layout_alignParentStart="true"
+            android:drawableEnd="@drawable/baseline_calendar_month_24" />
+    </RelativeLayout>
 
     <!-- Bouton pour ajouter la tâche -->
     <Button
         android:id="@+id/addButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dueDateInput"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="38dp"
+        android:backgroundTint="#475072"
+        android:fontFamily="sans-serif-medium"
+        android:padding="16dp"
         android:text="Ajouter"
-        android:backgroundTint="@color/white"
-        android:textColor="@android:color/black" />
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>

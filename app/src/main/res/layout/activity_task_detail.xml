@@ -1,71 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#2B2D3C"
     android:padding="16dp">
 
     <!-- Toolbar avec icône de retour -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/black"
-        app:title="Détails de la tâche"
-        app:titleTextColor="@android:color/white"
-        app:navigationIcon="@drawable/back_button"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="16dp"/>
+<androidx.appcompat.widget.Toolbar
+android:id="@+id/toolbar"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="#2B2D3C"
+    app:title="Détails de la tâche"
+    app:titleTextColor="#FFFFFF"
+
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="16dp"/>
 
     <!-- Conteneur pour les détails de la tâche, centré au milieu de la page -->
-    <LinearLayout
-        android:id="@+id/detailsContainer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerInParent="true"
-        android:gravity="center_horizontal">
+<LinearLayout
+android:id="@+id/detailsContainer"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:layout_centerInParent="true"
+android:gravity="center_horizontal">
 
-        <!-- En-tête pour titre de la tâche -->
-        <TextView
-            android:id="@+id/taskTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Titre de la tâche"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:fontFamily="sans-serif-medium" />
+<!-- En-tête pour titre de la tâche -->
+<TextView
+    android:id="@+id/taskTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Titre de la tâche"
+    android:textColor="#FFFFFF"
+android:textSize="24sp"
+android:fontFamily="sans-serif-medium" />
 
-        <!-- Champ description de la tâche -->
-        <TextView
-            android:id="@+id/taskDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Description de la tâche"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="18sp" />
+<!-- Champ description de la tâche -->
+<TextView
+    android:id="@+id/taskDescription"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="Description de la tâche"
+    android:textColor="#888C9B"
+android:textSize="18sp" />
 
-        <!-- Champ date limite de la tâche -->
-        <TextView
-            android:id="@+id/taskDueDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Date limite"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="18sp" />
+<!-- Champ date limite de la tâche -->
+<TextView
+    android:id="@+id/taskDueDate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="Date limite"
+    android:textColor="#888C9B"
+    android:textSize="18sp" />
 
-        <!-- Champ statut de la tâche -->
-        <TextView
-            android:id="@+id/taskStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Statut"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="18sp" />
-    </LinearLayout>
+<!-- Champ statut de la tâche -->
+<TextView
+    android:id="@+id/taskStatus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:text="Statut"
+    android:textColor="#888C9B"
+    android:textSize="18sp" />
+</LinearLayout>
 
-</RelativeLayout>
+    </RelativeLayout>

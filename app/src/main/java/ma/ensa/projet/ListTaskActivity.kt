@@ -48,7 +48,13 @@ class ListTaskActivity : AppCompatActivity() {
         val initialTasks = listOf(
             Task(1, "Faire les courses", "Acheter du lait, des œufs, du pain", "Aujourd'hui", false),
             Task(2, "Finir le projet Android", "Travailler sur l'application To-Do List", "Cette semaine", false),
-            Task(3, "Appeler le docteur", "Prendre un rendez-vous pour le contrôle annuel", "Demain", false)
+            Task(3, "Appeler le docteur", "Prendre un rendez-vous pour le contrôle annuel", "Demain", false),
+                    Task(4, "Réviser pour l'examen de maths", "Étudier les chapitres 3 à 5 et faire les exercices", "Ce week-end", false),
+        Task(5, "Acheter un cadeau d'anniversaire", "Chercher un cadeau pour l'anniversaire de Julie", "La semaine prochaine", false),
+        Task(6, "Nettoyer la voiture", "Passer l'aspirateur et nettoyer les vitres", "Aujourd'hui", false),
+        Task(7, "Planifier le voyage à Paris", "Réserver les billets et l'hôtel", "Ce mois-ci", false),
+        Task(8, "Faire du sport", "Aller à la salle de sport pour une séance de cardio", "Demain", false)
+
         )
         initialTasks.forEach { taskService.create(it) }
 

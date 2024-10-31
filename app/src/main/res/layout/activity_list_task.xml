@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#2B2D3C"
     android:padding="16dp">
 
     <!-- Titre et compteur des tâches -->
@@ -16,19 +16,28 @@
             android:id="@+id/allTasksText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Toutes les tâches"
-            android:textColor="@android:color/white"
+            android:text="Toutes les taches"
+            android:textColor="#FFFFFF"
             android:textSize="24sp"
-            android:fontFamily="sans-serif-medium"
-            android:layout_marginBottom="4dp" />
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold"
+            android:elevation="2dp"
+            android:shadowColor="#000000"
+            android:shadowDx="2"
+
+            android:shadowDy="2"
+            android:shadowRadius="4" />
 
         <TextView
             android:id="@+id/taskCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10 tâches"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="14sp" />
+            android:text="10 tasks"
+            android:textColor="#888C9B"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginBottom="12dp" />
     </LinearLayout>
 
     <!-- Barre de recherche -->
@@ -40,10 +49,12 @@
         android:layout_marginTop="16dp"
         android:drawableStart="@android:drawable/ic_menu_search"
         android:drawablePadding="8dp"
-        android:hint="Rechercher des tâches"
-        android:padding="12dp"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/darker_gray" />
+        android:hint="Chercher une tache"
+        android:padding="16dp"
+        android:background="@drawable/search_background"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888C9B"
+        android:elevation="4dp" />
 
     <!-- RecyclerView pour afficher les tâches -->
     <androidx.recyclerview.widget.RecyclerView
@@ -55,8 +66,15 @@
         android:layout_marginTop="16dp"
         android:clipToPadding="false"
         android:paddingBottom="16dp"
-        android:divider="?android:attr/dividerVertical"
-        android:dividerHeight="1dp" />
+        android:background="#2B2D3C"
+        android:paddingTop="8dp" />
+
+    <!-- Divider View for visual separation between RecyclerView items -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#888C9B"
+        android:layout_below="@id/taskRecyclerView"/>
 
     <!-- Bouton flottant pour ajouter une tâche -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -66,6 +84,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
+        android:backgroundTint="#475072"
+        android:elevation="8dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
         android:src="@drawable/baseline_add_circle_24"
-        android:tint="@color/black" />
+        android:tint="#FFFFFF"/>
 </RelativeLayout>

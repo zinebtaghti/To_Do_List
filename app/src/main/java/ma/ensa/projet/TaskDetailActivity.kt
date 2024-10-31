@@ -42,7 +42,7 @@ class TaskDetailActivity : AppCompatActivity() {
             titleTextView.text = title
             descriptionTextView.text = description
             dueDateTextView.text = dueDate
-            statusTextView.text = if (isCompleted) "Completed" else "Not Completed"
+            statusTextView.text = if (isCompleted) "Tache complétée" else "Tache non complétée"
         }
     }
 }
